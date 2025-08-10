@@ -1,0 +1,8 @@
+<h1>Lista de Tarefas</h1>
+<ul>
+  {% for t in tarefas %}
+    <li><a href="{% url 'tasks:detalhes' t.pk %}">{{ t.titulo }}</a></li>
+  {% empty %}
+    <li>Nenhuma tarefa</li>
+  {% endfor %}
+</ul>
