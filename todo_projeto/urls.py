@@ -20,7 +20,5 @@ from tasks import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', views.listar_tarefas, name='listar'),
-    path('<int:pk>/', views.detalhes_tarefa, name='detalhes'),
-     path('tasks/', include('tasks.urls'))
+    path('tasks/', include('tasks.urls'))
 ]
